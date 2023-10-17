@@ -94,7 +94,7 @@ const Register = () => {
     }
     if (check) {
       try {
-        fetch("http://localhost:3001/register", {
+        fetch("https://login-backend-ebon.vercel.app/register", {
           method: "post",
           headers: {
             Accept: "application/json",

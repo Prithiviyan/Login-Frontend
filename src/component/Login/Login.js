@@ -56,7 +56,7 @@ const Login = () => {
 
     if (check) {
       fetch(
-        `http://localhost:3001/?email=${checkEmail}&password=${checkPass}`
+        `https://login-backend-ebon.vercel.app/?email=${checkEmail}&password=${checkPass}`
       )
         .then(
           function (success) {

@@ -13,7 +13,7 @@ const Profile = () => {
   }
   var { mail } = useParams();
   var [userName, setUserName] = useState("UserName");
-  fetch(`http://localhost:3001/userget?email=${mail}`)
+  fetch(`https://login-backend-ebon.vercel.app/userget?email=${mail}`)
     .then(
       (succes) => {
         return succes.json();
@@ -73,7 +73,7 @@ const Profile = () => {
     }
     if (check) {
       try {
-        fetch("http://localhost:3001/profile", {
+        fetch("https://login-backend-ebon.vercel.app/profile", {
           method: "post",
           headers: {
             Accept: "application/json",
