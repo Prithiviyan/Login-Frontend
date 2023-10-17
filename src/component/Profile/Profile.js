@@ -53,6 +53,11 @@ const Profile = () => {
   async function handleUpate() {
     let check = true;
 
+    setGender("")
+    setDob("")
+    setAge("")
+    setMobileNumber("")
+
     if (dob === "") {
       setDobError("Please enter date of birth");
       check = false;
@@ -84,10 +89,10 @@ const Profile = () => {
         })
           .then(
             function (success) {
-              return success.json();
+              return success.json()
             },
             function (failiure) {
-              console.log("failiure");
+              console.log("failure");
             }
           )
           .then(function (data) {
@@ -97,13 +102,17 @@ const Profile = () => {
         alert("Did Not saved");
       }
     }
+    if(check){
+      alert("Successfully Updated your Details on MongoDB")
+    }
   }
 
+  
   return (
     <div className="md:w-[500px]  mx-auto shadow-md rounded-xl shadow-gray-700">
       <h1 className="text-center p-5 font-medium  text-gray-600 text-4xl">
         Pro<span className="text-green-500">file</span>
-        <BiLogOut className="float-right text-3xl text-green-400 p-1 mt-2 rounded-lg" onClick={logOut} />
+        <BiLogOut className="float-right text-3xl text-green-400 p-1 mt-2 rounded-lg cursor-pointer" onClick={logOut} />
       </h1>
     
       <div>
